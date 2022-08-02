@@ -95,6 +95,49 @@ footer {
     backdrop-filter: drop-shadow(2px 4px 6px black) blur(3px);
 }
 
+.meowbubble {
+    position: absolute;
+    min-width: 14em;
+    left: 50%;
+    text-align: center;
+    
+    animation: 0.5s bubblefadein;
+    
+    transform: translateX(-50%);
+    border-radius: 20px;
+    margin-top: 1em;
+    padding: 0.5em;
+    background-color: white;
+}
+.meowbubble::before {
+    content: "";
+    position: absolute;
+    bottom: 35px;
+    width: 1em;
+    height: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background: pink; */
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTAwcHgiIHdpZHRoPSIxMDBweCI+PHBvbHlnb24gcG9pbnRzPSI1MCwwIDEwMCwxMDAgMCwxMDAiIGZpbGw9IndoaXRlIi8+PC9zdmc+");
+    background-size: 1em 1em;
+}
+
+#meowcount {
+    font-weight: bold;
+}
+
+@keyframes bubblefadein {
+    from {
+        opacity: 0%;
+        transform: translate(-50%, -3em);
+    } to {
+        opacity: 100%;
+        transform: translate(-50%, 0);
+
+    }
+}
+
+/* For environments without css rendering */
 [nocss] {
     visibility: hidden;
 }

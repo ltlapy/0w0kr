@@ -4,7 +4,7 @@
     <title>=^0w0^=</title>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#fcc21b">
     
     <meta property="twitter:card" content="summary">
@@ -20,11 +20,12 @@
     <link href="/assets/index.css" type="text/css" rel="stylesheet"></style>
 </head>
 <body>
-    <main>
+    <main id="title">
         <h1 onmousedown="playMeow()">0w0</h1>
         <h1 alternative>&gt;w&lt;</h1>
     </main>
     <p nocss>such a cute domain.</p>
+
     <footer class="owofy">
         0w0ned by
         <a href="https://k.lapy.link/@lapy" icon="ltlapy">ltlapy</a>
@@ -43,8 +44,25 @@
                 meowcount = 0;
             }
             meowcount += 1;
+            if(meowcount > 9) {
+                updateMeowCount(meowcount)
+            }
 
             return "meow";
+        }
+
+        function updateMeowCount(n) {
+            if(typeof(n) !== 'number') return -1;
+            
+            let meowcount = document.getElementById('meowcount');
+
+            if(meowcount === null) {
+                const template = '<div class="meowbubble">You\'ve meowed <span id="meowcount"></span> times</div>';
+                document.getElementById('title').insertAdjacentHTML('beforeend', template);
+                return updateMeowCount(n);
+            }
+
+            return meowcount.innerText = n;
         }
     </script>
 </body>
