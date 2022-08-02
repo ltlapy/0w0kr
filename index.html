@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>=^0w0^=</title>
 
@@ -57,7 +57,7 @@
             let meowcount = document.getElementById('meowcount');
 
             if(meowcount === null) {
-                const template = '<div class="meowbubble">You\'ve meowed <span id="meowcount"></span> times</div>';
+                const template = '<div class="meowbubble">You\'ve meowed <wbr><span id="meowcount"></span> times</div>';
                 document.getElementById('title').insertAdjacentHTML('beforeend', template);
                 return updateMeowCount(n);
             }

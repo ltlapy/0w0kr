@@ -97,26 +97,30 @@ footer {
 
 .meowbubble {
     position: absolute;
-    min-width: 14em;
     left: 50%;
-    text-align: center;
-    
-    animation: 0.5s bubblefadein;
-    
-    transform: translateX(-50%);
-    border-radius: 20px;
+    min-width: 14em;
+    max-width: 20em;
     margin-top: 1em;
-    padding: 0.5em;
+    padding: 0.5em 1em;
+
+    animation: 0.5s bubblefadein;
+    transform: translateX(-50%);
+    
     background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    white-space: nowrap;
 }
 .meowbubble::before {
     content: "";
-    position: absolute;
-    bottom: 35px;
+    position: inherit;
+    top: -1em;
     width: 1em;
     height: 1em;
     left: 50%;
+
     transform: translateX(-50%);
+    
     /* background: pink; */
     background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTAwcHgiIHdpZHRoPSIxMDBweCI+PHBvbHlnb24gcG9pbnRzPSI1MCwwIDEwMCwxMDAgMCwxMDAiIGZpbGw9IndoaXRlIi8+PC9zdmc+");
     background-size: 1em 1em;
