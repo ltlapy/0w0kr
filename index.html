@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/asset/index.css" type="text/css" rel="stylesheet"></style>
+    <link href="/assets/index.css" type="text/css" rel="stylesheet"></style>
     <title>=^0w0^=</title>
 </head>
 <body>
     <main>
-        <h1>0w0</h1>
+        <h1 onmousedown="playMeow()">0w0</h1>
         <h1 alternative>&gt;w&lt;</h1>
     </main>
     <p nocss>such a cute domain.</p>
-    <footer>
-        Owned by
+    <footer class="owofy">
+        0w0ned by
         <a href="https://k.lapy.link/@lapy" icon="ltlapy">ltlapy</a>
+        <audio id="meow" src="/assets/meow.ogg"></audio>
     </footer>
+
+    <script type="text/javascript">
+        function playMeow() {
+            var meow = document.getElementById("meow");
+            meow.currentTime = 0;
+            meow.play();
+        }
+    </script>
 </body>
 </html>

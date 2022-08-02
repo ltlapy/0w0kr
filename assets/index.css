@@ -10,7 +10,7 @@ body:before {
     transition: all 1s;
 
     background-color: #fcc21b44;
-    background-image: url('/asset/blobcat.svg');
+    background-image: url('/assets/blobcat.svg');
     opacity: 30%;
     background-size: 20vw;
 
