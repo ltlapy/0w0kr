@@ -77,17 +77,20 @@ main h1:is(:active, *:active) ~ [alternative] {
 }
 
 footer {
-    --margin: 12px;
+    --margin: 18px;
     position: fixed;
-    /* width: calc(80% - 2 * var(--margin)); */
+    width: 60vw;
+    min-width: 12em;
+    max-width: 30em;
     left: 50%;
-    bottom: 0;
+    bottom: var(--margin);
+
     transform: translateX(-50%);
     text-align: center;
     background: white;
     border-radius: 12px;
-    margin: var(--margin);
-    padding: 8px 8em;
+    /* margin: var(--margin); */
+    padding: 8px 1em;
     box-shadow: 0 2px 3px grey;
     backdrop-filter: drop-shadow(2px 4px 6px black) blur(3px);
 }
